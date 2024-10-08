@@ -11,7 +11,7 @@
 class Lexer {
 
 public:
-    std::vector<Token> lex(std::string& line);
+    std::vector<Token> lex(std::string& content);
 
 private:
 

@@ -6,7 +6,8 @@
 #include <string>
 #include <vector>
 
-std::vector<Token> Lexer::lex(std::string& line) {
+// Lexes Markdown text into tokens. Returns a vector of tokens at the end
+std::vector<Token> Lexer::lex(std::string& content) {
     // PLACEHOLDER
     std::vector<Token> temp;
     return temp;

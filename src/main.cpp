@@ -1,8 +1,13 @@
 // main.cpp
 // Driver file for compiling markdown into a structured language.
 
+#include "Token.hpp"
+#include "Lexer.hpp"
+#include "Parser.hpp"
 #include <iostream>
+#include <vector>
 #include <fstream>
+#include <sstream>
 
 int main(int argc, char* argv[]) {
 
@@ -12,13 +17,15 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    std::string line;
-    unsigned int lineNumber = 0;
-    while (std::getline(file, line)) {
-        // @TODO: lex each line
-        ++lineNumber;
-    }
+    // Read Markdown file into a string
+    std::stringstream buffer;
+    buffer << file.rdbuf();
+    std::string content = buffer.str();
 
+    Lexer lexer;
+    Parser parser;
+
+    std::vector<Token> tokens = lexer.lex(content);
     // @TODO: parse tokens from lexer
 
     file.close();
