@@ -6,30 +6,30 @@
 
 #include <string>
 
+enum Type {
+    heading1,
+    heading2,
+    heading3,
+    heading4,
+    heading5,
+    heading6,
+    paragraph,
+    lineBreak,
+    bold,
+    italic,
+    blockQuote,
+    orderedListItem,
+    unorderedListItem,
+    image,
+    codeBlock,
+    horizontalRule,
+    link,
+    endOfFile
+};
+
 class Token {
 
 private:
-
-    enum Type {
-        heading1,
-        heading2,
-        heading3,
-        heading4,
-        heading5,
-        heading6,
-        paragraph,
-        lineBreak,
-        bold,
-        italic,
-        blockQuote,
-        orderedListItem,
-        unorderedListItem,
-        image,
-        codeBlock,
-        horizontalRule,
-        link,
-        endOfFile
-    };
 
     // token's type
     Type type;
