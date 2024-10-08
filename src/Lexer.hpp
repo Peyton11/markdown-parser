@@ -5,5 +5,17 @@
 #define LEXER_HPP
 
 #include "Token.hpp"
+#include <vector>
+#include <string>
+
+class Lexer {
+
+public:
+    std::vector<Token> lex(std::string& line);
+
+private:
+
+    std::vector<Token> tokens;
+};
 
 #endif

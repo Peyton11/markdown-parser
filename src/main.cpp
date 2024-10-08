@@ -13,8 +13,10 @@ int main(int argc, char* argv[]) {
     }
 
     std::string line;
+    unsigned int lineNumber = 0;
     while (std::getline(file, line)) {
         // @TODO: lex each line
+        ++lineNumber;
     }
 
     // @TODO: parse tokens from lexer
